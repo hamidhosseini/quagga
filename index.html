@@ -13,12 +13,18 @@
     <script>
         Quagga.init({
             inputStream : {
-            name : "Live",
-            type : "LiveStream",
-            target: document.querySelector('#quagga')    // Or '#yourElement' (optional)
+                constraints: {
+                    width: 300,
+                    height: 150,
+                    facingMode: "environment",
+                    deviceId: "7832475934759384534"
+                },
+                name : "Live",
+                type : "LiveStream",
+                target: document.querySelector('#quagga')    // Or '#yourElement' (optional)
             },
             decoder : {
-            readers : ["code_128_reader", "ean_reader", "ean_8_reader", "code_39_reader", "code_39_vin_reader", "codabar_reader", "upc_reader", "upc_e_reader", "i2of5_reader", "2of5_reader", "code_93_reader"]
+                readers : ["code_128_reader", "ean_reader", "ean_8_reader", "code_39_reader", "code_39_vin_reader", "codabar_reader", "upc_reader", "upc_e_reader", "i2of5_reader", "2of5_reader", "code_93_reader"]
             }
         }, function(err) {
             if (err) {
