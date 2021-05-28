@@ -31,7 +31,7 @@
 
         Quagga.onDetected(function (data) {
             console.log(data.codeResult)
-            document.querySelector('#result').innerHTML = JSON.stringify(data.codeResult)
+            document.querySelector('#result').innerHTML = JSON.stringify(data.codeResult.code)
         })
     </script>
 </body>
